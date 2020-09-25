@@ -2,7 +2,80 @@
     padding: 20px;
 }
 #errores2{
-    position: relative;
-    top:6px;
-    margin-left: 43%;
+    position: absolute;
+    top:260px;
+    left: 43%;
+}
+#alert{
+    position: absolute;
+    top: 260px;
+    left: 14.5%;
+}
+#success{
+    position: absolute;
+    top: 260px;
+    right: 14.5%;
+}
+#info{
+    position: absolute;
+    top: 25px;
+    left: 44%;
+}
+
+#surrender{
+    position: absolute;
+    top: 20px;
+    left: 42.5%;
+}
+#regularNumber{
+    position: absolute;
+    top: 310px;
+    left: 14.5%;
+}
+#goodNumber{
+    position: absolute;
+    top: 360px;
+    left: 14.5%;
+}
+
+@media (max-width: 500px){
+    .container{
+        padding: 0px;
+    }
+
+    #errores2{
+        position: absolute;
+        top: 37%;
+        left: 36.5%;
+    }
+    #alert{
+        position: absolute;
+        top: 37%;
+        left: 0%;
+    }
+    #success{
+        position: absolute;
+        top: 37%;
+        right: 0%;
+    }
+    #regularNumber{
+        position: absolute;
+        top: 44%;
+        left: 0%;
+    }
+    #goodNumber{
+        position: absolute;
+        top: 51%;
+        left: 0%;
+    }
+    #surrender{
+        position: absolute;
+        top: 135px;
+        left: 70%;
+    }
+    #info{
+        position: absolute;
+        top: 135px;
+        left: 70%;
+    }
 }
