@@ -34,6 +34,14 @@ document.getElementById('button1').addEventListener("click", function(){
   alerta.classList.add("d-none");
   surrender.classList.remove("d-inline");
   surrender.classList.add("d-none");
+  regular.classList.remove("d-inline");
+  regular.classList.add("d-none");
+  good.classList.remove("d-inline");
+  good.classList.add("d-none");
+
+  clear();
+  showfails.textContent = "";
+  fails = 0;
 });
 
 //console.log(correctNumber)
