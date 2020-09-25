@@ -18,8 +18,6 @@ document.getElementById('button1').addEventListener("click", function(){
   alert("Number generated")
 });
 
-console.log(correctNumber)
-
 //End number generator
 
 //Preventing/validating more than 1 digit per input and only numbers
@@ -69,7 +67,7 @@ var secondValue = document.getElementById("b");
 var thirdValue = document.getElementById("c");
 var fourthValue = document.getElementById("d");
 
-var fails;
+var fails = 0;
 var showfails = document.getElementById("errores2");
 
 function insert(){
@@ -125,17 +123,18 @@ document.getElementById("button2").addEventListener("click",() => {
        document.getElementById("b").value == correctNumber[1] &&
        document.getElementById("c").value == correctNumber[2] &&
        document.getElementById("d").value == correctNumber[3]) {
-      alert("Success " + correctNumber);
+      alert("Success " + correctNumber + " Attempts: " + fails);
       correctNumber.splice(0,correctNumber.length);
       clear();
     } else {
       alert("Still missing a few numbers");
         insert();
+	fails = fails + 1;
         var r = Math.random() * 200;
-		    var g = Math.random() * 200;
-		    var b = Math.random() * 200;
+	var g = Math.random() * 200;
+	var b = Math.random() * 200;
         document.getElementById("errores2").style.color = 'rgb('+r+','+g+','+b+')';
-        showfails.innerHTML += "Errors: " + acumfails.join(" - ") + "<br>";
+	showfails.innerHTML += "Attempt "+ fails +"°: "+ acumfails.join(" - ") + "<br>";
       }
       acumfails.splice(0,acumfails.length);
     }
