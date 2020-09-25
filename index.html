@@ -9,6 +9,7 @@
 </head>
 <body>
     <div class="container bg-secondary"><h1>Guess the number</h1>
+        <p>Write a number between 1 and 9 in each input, each number is unique and cannot be repeated: example 1 - 2 - 3 - 4</p>
         <div class="row">
             <div class="col-12">
                 <button id="button1" type="button" class="btn btn-primary">Start</button>
@@ -39,8 +40,13 @@
             </div>
         </div>
     </div>
-    <!--<div id="errores" class="d-inline p-2 bg-danger text-white">Fails</div>-->
-    <p id="errores2"></p>
+    <div id="alert" class="d-none alert alert-danger" role="alert">Sarasassss</div>
+    <div id="success" class="d-none alert alert-success" role="alert">Sarasassss</div>
+    <div id="errores2" class="d-none alert alert-primary" role="alert">Sarasassss</div>
+    <div id="info" class="d-none alert alert-info" role="alert">Sarasassss</div>
+    <div id="surrender" class="d-none alert alert-warning" role="alert">Sarasassss</div>
+    <div id="regularNumber" class="d-none alert alert-primary" role="alert">Sarasassss</div>
+    <div id="goodNumber" class="d-none alert alert-success" role="alert">Sarasassss</div>
     <script src="js/app.js"></script>
 </body>
 </html>
