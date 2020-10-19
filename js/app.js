@@ -7,6 +7,18 @@ var surrender = document.getElementById("surrender");
 var regular = document.getElementById("regularNumber");
 var good = document.getElementById("goodNumber");
 
+function removeClassInline(){
+  showfails.classList.remove("d-inline");
+  alerta.classList.remove("d-inline");
+  regular.classList.remove("d-inline");
+  good.classList.remove("d-inline");
+}
+function addClassNone(){
+  showfails.classList.add("d-none");
+  alerta.classList.add("d-none");
+  regular.classList.add("d-none");
+  good.classList.add("d-none");
+}
 var cantidadNumeros = 4;
 var correctNumber = [];
 document.getElementById('button1').addEventListener("click", function(){
@@ -23,21 +35,19 @@ document.getElementById('button1').addEventListener("click", function(){
       correctNumber[correctNumber.length] = numeroAleatorio;
       }
   }
+  //show info
   info.classList.remove("d-none");
   info.classList.add("d-inline");
   info.innerHTML = "Number generated";
+
   success.classList.remove("d-inline");
   success.classList.add("d-none");
-  showfails.classList.remove("d-inline");
-  showfails.classList.add("d-none");
-  alerta.classList.remove("d-inline");
-  alerta.classList.add("d-none");
+
   surrender.classList.remove("d-inline");
   surrender.classList.add("d-none");
-  regular.classList.remove("d-inline");
-  regular.classList.add("d-none");
-  good.classList.remove("d-inline");
-  good.classList.add("d-none");
+
+  removeClassInline();
+  addClassNone();
 
   clear();
   showfails.textContent = "";
@@ -111,35 +121,49 @@ function insert(){
  var goodNumbers = 0;
 
 document.getElementById("button2").addEventListener("click",() => {
-  //regular numbers
-  if (document.getElementById("a").value == correctNumber[0]+1 || 
-      document.getElementById('a').value == correctNumber[0]-1){
-      regularNumbers = regularNumbers + 1;
+  //good numbers>regular numbers
+  if (firstValue.value == correctNumber[0]){
+    goodNumbers += 1;
+    }else if(firstValue.value == correctNumber[0] ||
+             firstValue.value == correctNumber[1] || 
+             firstValue.value == correctNumber[2] || 
+             firstValue.value == correctNumber[3]) {
+      regularNumbers += 1;
+    }else{
+      regularNumbers + 0;
     }
-  if (document.getElementById("b").value == correctNumber[1]+1 || 
-      document.getElementById('b').value == correctNumber[1]-1){
-      regularNumbers = regularNumbers + 1;
-  }
-  if (document.getElementById("c").value == correctNumber[2]+1 || 
-      document.getElementById('c').value == correctNumber[2]-1){
-      regularNumbers = regularNumbers + 1;
+
+  if (secondValue.value == correctNumber[1]){
+    goodNumbers += 1;
+    }else if(secondValue.value == correctNumber[0] ||
+             secondValue.value == correctNumber[1] || 
+             secondValue.value == correctNumber[2] || 
+             secondValue.value == correctNumber[3]){
+      regularNumbers += 1;
+    }else{
+      regularNumbers + 0;
     }
-  if (document.getElementById("d").value == correctNumber[3]+1 || 
-      document.getElementById('d').value == correctNumber[3]-1){
-      regularNumbers = regularNumbers + 1;
-  }
-  //good numbers
-  if (document.getElementById("a").value == correctNumber[0]){
-    goodNumbers = goodNumbers + 1;
-  }
-  if (document.getElementById("b").value == correctNumber[1]){
-    goodNumbers = goodNumbers + 1;
-  }
-  if (document.getElementById("c").value == correctNumber[2]){
-    goodNumbers = goodNumbers + 1;
-  }
-  if (document.getElementById("d").value == correctNumber[3]){
-    goodNumbers = goodNumbers + 1;
+
+  if (thirdValue.value == correctNumber[2]){
+    goodNumbers += 1;
+    }else if(thirdValue.value == correctNumber[0] ||
+             thirdValue.value == correctNumber[1] || 
+             thirdValue.value == correctNumber[2] || 
+             thirdValue.value == correctNumber[3]){
+      regularNumbers += 1;
+    }else{
+      regularNumbers + 0;
+    }
+
+  if (fourthValue.value == correctNumber[3]){
+    goodNumbers += 1;
+  }else if(fourthValue.value == correctNumber[0] ||
+           fourthValue.value == correctNumber[1] || 
+           fourthValue.value == correctNumber[2] || 
+           fourthValue.value == correctNumber[3]){
+    regularNumbers += 1;
+  }else{
+    regularNumbers + 0;
   }
   regular.innerHTML = "Regular numbers: " + regularNumbers;
   good.innerHTML = "Good Numbers: " + goodNumbers;
@@ -150,22 +174,20 @@ document.getElementById("button2").addEventListener("click",() => {
   regularNumbers = 0;
   goodNumbers = 0;
 
-  if  (document.getElementById("a").value == correctNumber[0] && 
-       document.getElementById("b").value == correctNumber[1] &&
-       document.getElementById("c").value == correctNumber[2] &&
-       document.getElementById("d").value == correctNumber[3]) {
-      alerta.classList.remove("d-inline");
-      alerta.classList.add("d-none");
+  if  (firstValue.value == correctNumber[0] && 
+       secondValue.value == correctNumber[1] &&
+       thirdValue.value == correctNumber[2] &&
+       fourthValue.value == correctNumber[3]) {
+      //show success
       success.classList.remove("d-none");
       success.classList.add("d-inline");
+
       info.classList.remove("d-inline");
       info.classList.add("d-none");
-      showfails.classList.remove("d-inline");
-      showfails.classList.add("d-none");
-      regular.classList.remove("d-inline");
-      regular.classList.add("d-none");
-      good.classList.remove("d-inline");
-      good.classList.add("d-none");
+
+      removeClassInline();
+      addClassNone();
+
       success.innerHTML = "Success " + correctNumber.join(" - ") + " Attempts: "+ " " + fails;
       correctNumber.splice(0,correctNumber.length);
       clear();
@@ -177,6 +199,8 @@ document.getElementById("button2").addEventListener("click",() => {
         alerta.classList.remove("d-none");
         alerta.classList.add("d-inline");
         alerta.innerHTML = "Still missing a few numbers";
+        showfails.classList.remove("d-none")
+        showfails.classList.add("d-inline")
         insert();
         fails = fails + 1;
         document.getElementById("errores2").classList.add("d-inline");
@@ -187,6 +211,15 @@ document.getElementById("button2").addEventListener("click",() => {
   )
 //End Check
 
+function playAgain(){
+  var r = confirm("Try again?")
+  if (r == true){
+    document.getElementById('button1').click()
+  }else{
+    alert("Start whenever you want")
+  }
+}
+
 //Surrender
 document.getElementById("button3").addEventListener("click",() => {
   surrender.innerHTML = "The number was: " + correctNumber.join(" - ");
@@ -194,18 +227,17 @@ document.getElementById("button3").addEventListener("click",() => {
       clear();
       showfails.textContent = "";
       fails = 0;
+      
+      //show surrender 
       surrender.classList.remove("d-none");
       surrender.classList.add("d-inline");
-      showfails.classList.remove("d-inline");
-      showfails.classList.add("d-none");
-      alerta.classList.remove("d-inline");
-      alerta.classList.add("d-none");
+
       info.classList.remove("d-inline");
       info.classList.add("d-none");
-      regular.classList.remove("d-inline");
-      regular.classList.add("d-none");
-      good.classList.remove("d-inline");
-      good.classList.add("d-none");
-})
+
+      removeClassInline()
+      addClassNone()
+      playAgain()
+});
 
 
