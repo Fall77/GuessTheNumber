@@ -1,0 +1,201 @@
+body{
+    background-color: #313131;
+}
+
+.container{
+    margin-top: 17%;
+    padding: 20px;
+}
+#errores2{
+    margin-top: 17%;
+    position: absolute;
+    top:280px;
+    left: 43%;
+}
+#alert{
+    margin-top: 17%;
+    position: absolute;
+    top: 262px;
+    left: 14.5%;
+}
+#success{
+    margin-top: 17%;
+    position: absolute;
+    top: 260px;
+    right: 14.5%;
+}
+#info{
+    margin-top: 17%;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+}
+
+#surrender{
+    margin-top: 17%;
+    position: absolute;
+    top: 20px;
+    left: 60%;
+}
+#regularNumber{
+    margin-top: 17%;
+    position: absolute;
+    top: 314px;
+    left: 14.5%;
+}
+#goodNumber{
+    margin-top: 17%;
+    position: absolute;
+    top: 366px;
+    left: 14.5%;
+}
+
+@media (max-width: 400px){
+    .container{
+        padding: 0px;
+    }
+
+    #errores2{
+        position: absolute;
+        top: 37%;
+        left: 55%;
+    }
+    #alert{
+        position: absolute;
+        top: 37%;
+        left: 0%;
+    }
+    #success{
+        width: 300px;
+        height: 100px;
+        position: absolute;
+        top: 50px;
+        left: 17%;
+        text-align: center;
+        padding: 40px;
+        box-sizing: border-box;
+    }
+    #regularNumber{
+        position: absolute;
+        top: 45%;
+        left: 0%;
+    }
+    #goodNumber{
+        position: absolute;
+        top: 53%;
+        left: 0%;
+    }
+    #surrender{
+        width: 300px;
+        height: 100px;
+        position: absolute;
+        top: 50px;
+        left: 17%;
+        text-align: center;
+        padding: 40px;
+        box-sizing: border-box;
+    }
+    #info{
+        position: absolute;
+        top: 65px;
+        left: 30%;
+    }
+}
+@media (max-width: 699px){
+    #alert{
+        position: absolute;
+        top: 70%;
+        left: 11.3%;
+        height: 30px;
+        text-align: center;
+        padding: 2px;
+    }
+    #regularNumber{
+        position: absolute;
+        top: 80%;
+        left: 11.3%;
+        height: 30px;
+        text-align: center;
+        padding: 2px;
+    }
+    #goodNumber{
+        position: absolute;
+        top: 90%;
+        left: 11.3%;
+        height: 30px;
+        text-align: center;
+        padding: 2px;
+    }
+    #info{
+        position: absolute;
+        top: 31%;
+        left: 55%;
+    }
+    #errores2{
+        position: absolute;
+        top: 70%;
+        left: 64.5%;
+        height: 30px;
+        text-align: center;
+        padding: 2px;
+    }
+    #surrender{
+        width: 300px;
+        height: 100px;
+        position: absolute;
+        top: 20px;
+        left: 30%;
+        text-align: center;
+        padding-top: 35px;
+        box-sizing: border-box;
+        z-index: 2;
+    }
+    #success{
+        width: 300px;
+        height: 100px;
+        position: absolute;
+        top: 20px;
+        left: 30%;
+        text-align: center;
+        padding-top: 35px;
+        box-sizing: border-box;
+        z-index: 1;
+    }
+}
+@media (max-width: 1024px){
+    #alert{
+        position: absolute;
+        top: 43%;
+        left: 2%;
+    }
+    #regularNumber{
+        position: absolute;
+        top: 52%;
+        left: 2%;
+    }
+    #goodNumber{
+        position: absolute;
+        top: 61%;
+        left: 2%;
+    }
+    #errores2{
+        position: absolute;
+        top:43%;
+        left: 39%;
+    }
+    #success{
+        position: absolute;
+        top: 43%;
+        right: 2%;
+    }
+    #surrender{
+        position: absolute;
+        top: 25px;
+        left: 67%;
+    }
+    #info{
+        position: absolute;
+        top: 25px;
+        left: 67%;
+    }
+}
