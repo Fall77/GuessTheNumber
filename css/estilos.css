@@ -1,43 +1,52 @@
+body{
+    background-color: #313131;
+}
+
 .container{
+    margin-top: 17%;
     padding: 20px;
 }
-body{
-    background-color: #323232;
-}
 #errores2{
+    margin-top: 17%;
     position: absolute;
-    top:260px;
+    top:280px;
     left: 43%;
 }
 #alert{
+    margin-top: 17%;
     position: absolute;
-    top: 260px;
+    top: 262px;
     left: 14.5%;
 }
 #success{
+    margin-top: 17%;
     position: absolute;
     top: 260px;
     right: 14.5%;
 }
 #info{
+    margin-top: 17%;
     position: absolute;
     top: 20px;
     left: 50%;
 }
 
 #surrender{
+    margin-top: 17%;
     position: absolute;
     top: 20px;
-    left: 50%;
+    left: 60%;
 }
 #regularNumber{
+    margin-top: 17%;
     position: absolute;
-    top: 312px;
+    top: 314px;
     left: 14.5%;
 }
 #goodNumber{
+    margin-top: 17%;
     position: absolute;
-    top: 364px;
+    top: 366px;
     left: 14.5%;
 }
 
