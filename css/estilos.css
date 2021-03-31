@@ -1,10 +1,15 @@
 body{
+    background-image: url(../img/matrixBg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     background-color: #313131;
 }
 
 .container{
+    background: linear-gradient(top rgb(25,90,130) 10% rgb(50,130,170) 40% rgb(100,150, 200) 100%);
     margin-top: 17%;
     padding: 20px;
+    border-radius: 20px;
 }
 #errores2{
     margin-top: 17%;
