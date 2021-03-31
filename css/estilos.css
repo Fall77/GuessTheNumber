@@ -1,6 +1,6 @@
 body{
     background-image: url(../img/matrixBg.jpg);
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
     background-size: cover;
     background-color: #313131;
 }
