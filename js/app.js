@@ -239,5 +239,3 @@ document.getElementById("button3").addEventListener("click",() => {
       addClassNone()
       playAgain()
 });
-
-
